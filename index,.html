@@ -1,31 +1,137 @@
 <!DOCTYPE html>
-     <html lang="pl-PL">
-       <html>
-        <head>
-         <meta charset="utf-8">
-  <title> Natalia Narkiewicz </title>
-        </head>
-     <body>
-Natalia Narkiewicz
-<p align="right"> <font color="red" size="1" face="Arial"> Natalia </font> </p> <br> 
-<p align="right"> <font color="red" size="2" face="Arial"> Natalia </font> </p> <br>
-<p align="right"> <font color="red" size="3" face="Arial"> Natalia </font> </p> <br>
-<p align="right"> <font color="red" size="4" face="Arial"> Natalia </font> </p> <br> 
-<p align="right"> <font color="red" size="5" face="Arial"> Natalia </font> </p> <br>
-<p align="right"> <font color="red" size="6" face="Arial"> Natalia </font> </p> <br> 
-<p align="right"> <font color="red" size="7" face="Arial"> Natalia </font> </p> <br>
-<h1> Narkiewicz </h1><br>
-<h2> Narkiewicz </h2><br>
-<h3> Narkiewicz </h3><br>
-<h4> Narkiewicz </h4><br>
-<h5> Narkiewicz </h5><br>
-<h6> Narkiewicz </h6><br>
-<p align="right"> <font color="red" size="1" face="Arial"> :) </font> </p> <br>
-<p align="right"> <font color="blue" size="2" face="Courier New">:( </font> </p> <br>
-<p align="right"> <font color="black" size="3" face="Verdana"> :0 </font> </p> <br>
-<p align="right"> <font color="green" size="4" face="Arial"> :C </font> </p> <br>
-<p align="right"> <font color="yellow" size="5" face="Courier New">;) </font> </p> <br> 
-<p align="right"> <font color="purple" size="6" face="Times New Roman"> :P </font> </p> <br> 
-   </body>
-  </html>
-  
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz Zwrotu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: black;
+        }
+        form {
+            border: 2px solid purple;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="text"], input[type="email"], input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid purple;
+            border-radius: 3px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid purple;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        .checkboxes label {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        .signatures {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .signatures div {
+            text-align: center;
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formularz ZWROTU / odstąpienia od UMOWY</h1>
+    <form>
+        <label for="order-number">Numer zamówienia</label>
+        <input type="text" id="order-number" name="order-number">
+        
+        <label for="order-date">Data zamówienia</label>
+        <input type="text" id="order-date" name="order-date">
+        
+        <label for="name">Imię i nazwisko</label>
+        <input type="text" id="name" name="name">
+        
+        <label for="address">Adres</label>
+        <input type="text" id="address" name="address">
+        
+        <label for="phone">Telefon</label>
+        <input type="text" id="phone" name="phone">
+        
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email">
+        
+        <label for="bank-account">Numer rachunku bankowego</label>
+        <input type="text" id="bank-account" name="bank-account">
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Nazwa towaru</th>
+                    <th>Ilość</th>
+                    <th>Cena Brutto</th>
+                    <th>Przyczyna zwrotu</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="text" name="item-name"></td>
+                    <td><input type="number" name="item-quantity"></td>
+                    <td><input type="text" name="item-price"></td>
+                    <td><input type="text" name="return-reason"></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <label for="remarks">Uwagi klienta:</label>
+        <input type="text" id="remarks" name="remarks">
+        
+        <div class="checkboxes">
+            <label>Rozmiar produktu:
+                <input type="checkbox" name="size" value="small"> Mały
+                <input type="checkbox" name="size" value="medium"> Średni
+                <input type="checkbox" name="size" value="large"> Duży
+            </label>
+            <label>Gwarancja:
+                <input type="checkbox" name="warranty" value="none"> Brak
+                <input type="checkbox" name="warranty" value="constant"> Stała
+                <input type="checkbox" name="warranty" value="1-6"> 1-6 lat
+                <input type="checkbox" name="warranty" value="6-12"> 6-12 lat
+            </label>
+            <label>Waga:
+                <input type="checkbox" name="weight" value="0-3"> 0-3
+                <input type="checkbox" name="weight" value="3-6"> 3-6
+                <input type="checkbox" name="weight" value="6-10"> 6-10
+                <input type="checkbox" name="weight" value="10"> <10
+            </label>
+        </div>
+        
+        <div class="signatures">
+            <div>
+                <p>Podpis Kuriera (odbierającego przesyłkę, od klienta) / Data</p>
+                <p>...........................................</p>
+            </div>
+            <div>
+                <p>Podpis zwracającego / Data</p>
+                <p>...........................................</p>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
